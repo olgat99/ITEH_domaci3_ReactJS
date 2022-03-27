@@ -24,7 +24,7 @@ const Home:FC = ()=>{
   }
 
     return (
-      <div className="bg-black">
+      <div className="bg-[#62287d]">
         <div className='px-24 opacity-80 flex justify-end h-96
         bg-no-repeat bg-center bg-cover
         bg-banner-background shadow-xl shadow-green-500'>
