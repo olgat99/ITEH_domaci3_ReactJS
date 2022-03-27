@@ -27,23 +27,23 @@ const Home:FC = ()=>{
       <div className="bg-[#62287d]">
         <div className='px-24 opacity-80 flex justify-end h-96
         bg-no-repeat bg-center bg-cover
-        bg-banner-background shadow-xl shadow-green-500'>
-                <div className='text-white text-[7rem] font-bold' style={{ textShadow: '4px 5px 6px black' }}>Game</div>
-                <div className='text-green-600 text-[7rem] font-black' style={{ textShadow: '4px 5px 6px black' }}>HUB</div>
+        bg-banner-background shadow-2xl shadow-yellow-600'>
+                <div className='text-white text-[7rem] font-bold pt-20' style={{ textShadow: '4px 5px 6px black' }}>Gamefy</div>
+                <div className='text-green-600 text-[7rem] font-black' style={{ textShadow: '4px 5px 6px black' }}></div>
         </div>
         <div className="mt-12 mx-[5.5rem] flex">
           <span className="h-[2rem] bg-green-600 inline-block">
             <input id="searchWord" type="text" className="h-full" />
           </span>
           <span onClick={handleSearch}
-            className="text-white bg-green-800 h-[2rem] px-2 cursor-pointer hover:bg-green-600 transition-all leading-8 inline-block">Search games</span>
+            className="text-white bg-yellow-800 h-[2rem] px-2 cursor-pointer hover:bg-yellow-600 transition-all leading-8 inline-block">Search games</span>
         </div>
         <div className='flex-row flex flex-wrap px-8 pt-8 justify-center'>
                 {games.map((game: GameBasicInfo, index) => <GameCard game={game} key={game.id} />)}
         </div>
         <div className="text-white flex justify-center pb-16 ">
           <nav>
-            <ul className="inline-flex bg-green-600 rounded-r-lg rounded-l-lg shadow-lg shadow-green-500">
+            <ul className="inline-flex bg-green-600 rounded-r-lg rounded-l-lg shadow-lg shadow-yellow-500">
               <li><button onClick={() => setCurrentPage(1)} className="h-10 px-5 text-black transition-colors duration-150 bg-green-600 hover:bg-green-400 hover:text-white text-2xl rounded-l-lg">{'<'}</button></li>
               {[...Array(numberOfPages)].map( (_, pageNumber) => shouldRenderPageNumber(pageNumber+1) ?
                 <li><button onClick={() => setCurrentPage(pageNumber+1)} className="h-10 px-5 text-black transition-colors duration-150 bg-green-600 cursor-pointer hover:bg-green-400" style={{color: pageNumber+1===currentPage ? 'white' : 'black'}}>{pageNumber+1}</button></li> : '')}

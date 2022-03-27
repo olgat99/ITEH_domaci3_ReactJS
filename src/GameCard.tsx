@@ -20,8 +20,8 @@ const GameCard: FC<{ game: GameBasicInfo }> = ({ game }) => {
 
     return (
         <div onClick={()=>document.location="/game/"+game.id} className="text-white w-1/5 m-7 mb-20 bg-gray-800 h-80 rounded-xl overflow-hidden
-        shadow-xl shadow-green-700
-        hover:scale-105 hover:shadow-green-500
+        shadow-xl shadow-yellow-700
+        hover:scale-105 hover:shadow-yellow-500
         transition-all cursor-pointer">
             <div className="h-1/2">
                 <img src={game.background_image} className="h-full w-full object-cover" alt="" />
