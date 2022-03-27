@@ -43,17 +43,18 @@ const Home:FC = ()=>{
         </div>
         <div className="text-white flex justify-center pb-16 ">
           <nav>
-            <ul className="inline-flex bg-green-600 rounded-r-lg rounded-l-lg shadow-lg shadow-yellow-500">
-              <li><button onClick={() => setCurrentPage(1)} className="h-10 px-5 text-black transition-colors duration-150 bg-green-600 hover:bg-green-400 hover:text-white text-2xl rounded-l-lg">{'<'}</button></li>
+            <ul className="inline-flex bg-purple-600 rounded-r-lg rounded-l-lg shadow-lg shadow-yellow-500">
+              <li><button onClick={() => setCurrentPage(1)} className="h-10 px-5 text-black transition-colors duration-150 bg-purple-600 hover:bg-purple-400 hover:text-white text-2xl rounded-l-lg">{'<'}</button></li>
               {[...Array(numberOfPages)].map( (_, pageNumber) => shouldRenderPageNumber(pageNumber+1) ?
-                <li><button onClick={() => setCurrentPage(pageNumber+1)} className="h-10 px-5 text-black transition-colors duration-150 bg-green-600 cursor-pointer hover:bg-green-400" style={{color: pageNumber+1===currentPage ? 'white' : 'black'}}>{pageNumber+1}</button></li> : '')}
+                <li><button onClick={() => setCurrentPage(pageNumber+1)} className="h-10 px-5 text-black transition-colors duration-150 bg-purple
+                -600 cursor-pointer hover:bg-purple-400" style={{color: pageNumber+1===currentPage ? 'white' : 'black'}}>{pageNumber+1}</button></li> : '')}
   
   
-              <li><button className="h-10 px-5 text-black transition-colors duration-150 bg-green-600 cursor-auto">...</button></li>
+              <li><button className="h-10 px-5 text-black transition-colors duration-150 bg-purple-600 cursor-auto">...</button></li>
   
   
-              <li><button className="h-10 px-5 text-black transition-colors duration-150 bg-green-600 hover:bg-green-400 hover:text-white">{numberOfPages}</button></li>
-              <li><button onClick={() => setCurrentPage(numberOfPages)} className="h-10 px-5 text-black transition-colors duration-150 bg-green-600 hover:bg-green-400 hover:text-white text-2xl rounded-r-lg">{'>'}</button></li>
+              <li><button className="h-10 px-5 text-black transition-colors duration-150 bg-purple-600 hover:bg-purple-400 hover:text-white">{numberOfPages}</button></li>
+              <li><button onClick={() => setCurrentPage(numberOfPages)} className="h-10 px-5 text-black transition-colors duration-150 bg-purple-600 hover:bg-purple-400 hover:text-white text-2xl rounded-r-lg">{'>'}</button></li>
             
             </ul>
           </nav>
